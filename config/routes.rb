@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'ideas/homepage'
+
+  get 'ideas/idea_overview'
+
+  get 'ideas/new_idea'
+
+  get 'ideas/edit_idea'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
