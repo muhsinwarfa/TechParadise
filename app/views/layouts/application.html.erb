@@ -7,10 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'header' %>
 
-<%= yield %>
-<%= render 'footer' %>
+	
+	<%= render 'header' %>
+
+	<div class="yieldwrap">
+		<%= yield %>
+	</div>
+	<div class="wrapper">
+		<%=render 'about' %>
+		<%=render 'help' %>
+	
+	</div>
+	<%= render 'footer' %>
 
 
 </body>

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :users
+  resources :platforms
+  resources :roles
   resources :ideas
   get 'ideas/homepage'
 
