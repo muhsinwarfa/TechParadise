@@ -78,32 +78,38 @@ body{
 
 
 .About{
-	padding: 0px;
+	
 	height: 100%;
-	margin: 0px;
-	width: 50%;
+	
+	width: 40%;
 	display: inline-block;
 	text-align: center;
 	padding-top: 30px;
-	
-
-
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 70px;
 
 }
+
 .help{
-	padding: padding: 0px;
-	margin: 0px;
+	
 	height: 100%;
-	width: 50%;
+	width: 35%;
 	display: inline-block;
 	float: right;
 	text-align: center;
+	margin-right: 100px;
 	padding-top: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	
 }
 .wrapper{
-	height: 40vh;
+	height: 500px;
 	width: 100%;
 	position: relative;
+	font-size: 18px;
+	padding-top: 20px;
 }
 
 .img{
@@ -127,7 +133,7 @@ body{
 	width: 100%;
 	padding-left: 300px;
 	padding-top: 50px;
-	background-color: white;
+	background-color: #d9e4f4;
 	
 	
 }
@@ -147,6 +153,23 @@ body{
 	font-size: 25px;
 	
 
+}
+.newidealink{
+	text-decoration: none;
+	color: black;
+	font-size: 25px;
+	margin-left: 20px;
+
+}
+
+.idealist{
+	display: block;
+	font-size: 18px;
+
+}
+
+.about>p , .help>p{
+	font-size: 18px;
 }
 
 
