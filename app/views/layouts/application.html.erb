@@ -9,17 +9,16 @@
 <body>
 
 	
-	<%= render 'header' %>
-
+	<%= render 'layouts/header' %>
 	<div class="yieldwrap">
 		<%= yield %>
 	</div>
 	<div class="wrapper">
-		<%=render 'about' %>
-		<%=render 'help' %>
+		<%=render 'layouts/about' %>
+		<%=render 'layouts/help' %>
 	
 	</div>
-	<%= render 'footer' %>
+	<%=render 'layouts/footer' %>
 
 
 </body>
