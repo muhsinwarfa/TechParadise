@@ -1,4 +1,4 @@
-class Platfrom < ActiveRecord::Base
+class Platform < ActiveRecord::Base
 	has_many :ideas
 
 	
