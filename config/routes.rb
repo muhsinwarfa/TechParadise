@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   resources :platforms
   resources :roles
   resources :ideas
+  resources :sessions , only: [:new , :create , :destroy]
+
+  root 'ideas#index' 
+  get 'sessions/new' => 'sessions#new', as: :login
+  delete 'sessions/:id' => 'sessions#destoy', as: :logout
+  get 'users/new' => 'users#new', as: :signup
  
 
   # The priority is based upon order of creation: first created -> highest priority.
