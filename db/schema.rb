@@ -11,32 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161120185110) do
+ActiveRecord::Schema.define(version: 20161125180315) do
 
   create_table "ideas", force: :cascade do |t|
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
     t.string   "idea_name"
-    t.string   "idea_description"
-    t.string   "additional_info"
+    t.text     "idea_description"
+    t.text     "additional_info"
     t.integer  "platform_id"
     t.integer  "role_id"
     t.integer  "user_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
-  create_table "platforms", force: :cascade do |t|
+  create_table "platfroms", force: :cascade do |t|
     t.string   "platform_name"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
   create_table "roles", force: :cascade do |t|
-    t.string   "skills_overview"
+    t.string   "skill_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
-# Could not dump table "users" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

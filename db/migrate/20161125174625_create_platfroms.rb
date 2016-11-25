@@ -1,6 +1,6 @@
-class CreatePlatforms < ActiveRecord::Migration
+class CreatePlatfroms < ActiveRecord::Migration
   def change
-    create_table :platforms do |t|
+    create_table :platfroms do |t|
       t.string :platform_name
 
       t.timestamps null: false
