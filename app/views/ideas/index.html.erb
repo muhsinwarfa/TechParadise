@@ -28,11 +28,9 @@
       <thead>
         <tr>
           <th>Idea name</th>
-          <th>Idea description</th>
-          <th>Additional info</th>
           <th>Platform</th>
-          <th>Role</th>
-          <th>User</th>
+          <th>Help Needed</th>
+          
           <th colspan="3"></th>
         </tr>
       </thead>
@@ -42,11 +40,10 @@
 
           <tr class="indextablerow"> 
             <td><%= idea.idea_name %></td>
-            <td><%= idea.idea_description %></td>
-            <td><%= idea.additional_info %></td>
+          
+            <td><%= idea.ad %></td>
             <td><%= idea.platform_id %></td>
-            <td><%= idea.role_id %></td>
-            <td><%= idea.user_id %></td>
+          
             <td><%= link_to 'Show', idea ,class: "idealink"%></td>
             <td><%= link_to 'Edit', edit_idea_path(idea),class: "idealink" %></td>
             <td><%= link_to 'Destroy', idea, class: "idealink",method: :delete, data: { confirm: 'Are you sure?' } %></td>
