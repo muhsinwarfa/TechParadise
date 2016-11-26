@@ -3,9 +3,9 @@
 Muhsin:
   name: Muhsin
   email: muhsin.warfa@gmail.com
-  password_digest: <%= BCrypt::Password.create('muhsin', cost: 4) %>
+  password_digest: <%= BCrypt::Password.create('muhsinwarfa', cost: 4) %>
 
 Abdi:
   name: Abdi
   email: abdi@gmail.com
-  password_digest:  <%= BCrypt::Password.create('muhsin', cost: 4) %>
+  password_digest:  <%= BCrypt::Password.create('abdisherif', cost: 4) %>
