@@ -4,7 +4,7 @@ class IdeasController < ApplicationController
   # GET /ideas
   # GET /ideas.json
   def index
-    @ideas = Idea.joins(:platform,:role,:user)
+    @ideas = Idea.all
   end
 
   # GET /ideas/1
