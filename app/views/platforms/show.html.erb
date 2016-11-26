@@ -1,9 +1,12 @@
 <p id="notice"><%= notice %></p>
+<div class="showforeveryview">
+	
 
 <p>
   <strong>Platform name:</strong>
   <%= @platform.platform_name %>
 </p>
 
-<%= link_to 'Edit', edit_platform_path(@platform) %> |
-<%= link_to 'Back', platforms_path %>
+<%= link_to 'Edit', edit_platform_path(@platform), class: "idealink" %> |
+<%= link_to 'Back', platforms_path, class: "idealink" %>
+</div>

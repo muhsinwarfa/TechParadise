@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<div class="showforeveryview">
 <p>
   <strong>Skills :</strong>
   <%= @role.skill_name %>
 </p>
 
-<%= link_to 'Edit', edit_role_path(@role) %> |
-<%= link_to 'Back', roles_path %>
+<%= link_to 'Edit', edit_role_path(@role) , class: "idealink"%> |
+<%= link_to 'Back', roles_path, class: "idealink" %>
+</div>

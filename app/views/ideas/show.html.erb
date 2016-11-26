@@ -1,34 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Idea name:</strong>
-  <%= @idea.idea_name %>
-</p>
+<div class=" showforeveryview">
+  <p>
+    <strong>Idea name:</strong>
+    <%= @idea.idea_name %>
+  </p>
 
-<p>
-  <strong>Idea description:</strong>
-  <%= @idea.idea_description %>
-</p>
+  <p>
+    <strong>Idea description:</strong>
+    <%= @idea.idea_description %>
+  </p>
 
-<p>
-  <strong>Additional info:</strong>
-  <%= @idea.additional_info %>
-</p>
+  <p>
+    <strong>Additional info:</strong>
+    <%= @idea.additional_info %>
+  </p>
 
-<p>
-  <strong>Platform:</strong>
-  <%= @idea.platform_id %>
-</p>
+  <p>
+    <strong>Platform:</strong>
+    <%= @idea.platform.platform_name %>
+  </p>
 
-<p>
-  <strong>Role:</strong>
-  <%= @idea.role_id %>
-</p>
+  <p>
+    <strong>Role:</strong>
+    <%= @idea.role.skill_name%>
+  </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @idea.user_id %>
-</p>
+  <p>
+    <strong>User:</strong>
+    <%= @idea.user.name %>
+  </p>
 
-<%= link_to 'Edit', edit_idea_path(@idea) %> |
-<%= link_to 'Back', ideas_path %>
+  <%= link_to 'Edit', edit_idea_path(@idea), class: "idealink"%> |
+  <%= link_to 'Back', ideas_path,class: "idealink" %>
+</div>

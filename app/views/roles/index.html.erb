@@ -1,11 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Roles</h1>
+<div class="idealist">
+  
 
-<table>
+<table class="indextable">
   <thead>
     <tr>
-      <th>Skills overview</th>
+      <th class="tablespace">Skills overview</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,15 +15,16 @@
   <tbody>
     <% @roles.each do |role| %>
       <tr>
-        <td><%= role.skill_name %></td>
-        <td><%= link_to 'Show', role %></td>
-        <td><%= link_to 'Edit', edit_role_path(role) %></td>
-        <td><%= link_to 'Destroy', role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="tablespace"><%= role.skill_name %></td>
+        <td><%= link_to 'Show', role ,class: "idealink tablespace"%></td>
+        <td><%= link_to 'Edit', edit_role_path(role),class: "idealink tablespace" %></td>
+        <td><%= link_to 'Destroy', role, class: "idealink tablespace",method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+</div>
 
-<%= link_to 'New Role', new_role_path %>
+<%= link_to 'New Role', new_role_path,class: "newidealink" %>

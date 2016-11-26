@@ -9,8 +9,6 @@ class User < ActiveRecord::Base
     format: { with: VALID_EMAIL_REGEX },
     uniqueness: { case_sensitive: false }
 
-    scope :newest_first, -> { order("created_at DESC")}
-    scope :oldest_first , -> { order("created_at ASC")}
     
 
 

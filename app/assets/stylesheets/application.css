@@ -164,6 +164,8 @@ body{
 	color: black;
 	font-size: 25px;
 	margin-left: 125px;
+	border-bottom: solid;
+	border-color: black;
 
 }
 
@@ -183,6 +185,12 @@ body{
 
 
 }
+.tablespace{
+	padding-left: 40px;
+	margin-left: 40px;
+	padding-top: 15px;
+
+}
 
 .idealink{
 	text-decoration: none;
@@ -195,8 +203,11 @@ body{
 	border-radius: 1px;
 	margin-right: 5px;
 	padding: 2px 2px 2px 2px;
+	background-color: #93a9ff;
+	margin-top: 10px;
+}
+.idealink:hover{
 	background-color: #3db1ff;
-
 
 }
 .indextable{
@@ -278,4 +289,9 @@ h4{
 	margin-left: 200px;
 	width: 500px;
 	height: 200px;
+}
+
+.showforeveryview{
+	padding-top: 50px;
+	padding-left: 50px;
 }
