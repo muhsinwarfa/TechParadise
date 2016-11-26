@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-Web App:
-  platform_name: Web App
+WebApp:
+  platform_name: WebApp
 
 Android:
   platform_name: Android
