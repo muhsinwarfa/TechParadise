@@ -168,6 +168,16 @@ body{
 	border-color: black;
 
 }
+.td{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino,serif;
+	font-size: 20px;
+
+}
+.th{
+	
+	font-size: 25px;
+
+}
 
 .idealist{
 	display: block;

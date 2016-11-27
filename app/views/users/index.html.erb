@@ -6,7 +6,7 @@
 <table class="indextable" >
   <thead>
     <tr>
-      <th  class="tablespace">Name</th>
+      <th  class="th tablespace">Name</th>
       
       
       <th colspan="3"></th>
@@ -16,7 +16,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td class="tablespace"><%= user.name %></td>
+        <td class="td tablespace"><%= user.name %></td>
         <td><%= link_to 'Show', user,class: "idealink tablespace" %></td>
         <td ><%= link_to 'Edit', edit_user_path(user),class: "idealink tablespace" %></td>
         <td><%= link_to 'Destroy', user,class: "idealink tablespace" ,method: :delete, data: { confirm: 'Are you sure?' } %></td>

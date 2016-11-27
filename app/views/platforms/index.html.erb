@@ -6,7 +6,7 @@
 <table class="indextable">
   <thead>
     <tr>
-      <th class="tablespace">Platform name</th>
+      <th class="th tablespace">Platform name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,7 +14,7 @@
   <tbody>
     <% @platforms.each do |platform| %>
       <tr>
-        <td class="tablespace"><%= platform.platform_name %></td>
+        <td class="td tablespace"><%= platform.platform_name %></td>
         <td><%= link_to 'Show', platform ,class: "idealink tablespace"%></td>
         <td><%= link_to 'Edit', edit_platform_path(platform) ,class: "idealink tablespace"%></td>
         <td><%= link_to 'Destroy', platform,class: "idealink tablespace", method: :delete, data: { confirm: 'Are you sure?' } %></td>
