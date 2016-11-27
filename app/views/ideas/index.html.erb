@@ -8,9 +8,13 @@
     <h1 id="indextitle">Explore The Showcase</h1>
     <div class="selectlinks">
 
-    <%# > <%= select_tag([[Newest,@newest],[Oldest,@oldest],[Ascending, @ascending_names],[Descending, @descending_names]])%>
-     <%#> <%= select_tag ([[Platform, @platform],[Help needed , @help_needed]]) %> 
-          <select>
+
+
+
+
+
+    
+        <!--   <select>
           <option value="">Newest</option>
           <option value="new">Oldest</option>
           <option value="new">Ascending</option>
@@ -20,7 +24,7 @@
         <select>
           <option value="new">Platform</option>
           <option value="new">Help needed</option>
-        </select>
+        </select> -->
     </div>
 
     <%= link_to 'Have a New Idea?', new_idea_path,class: "newidealink" %>
@@ -35,6 +39,8 @@
           <th class="th tablespace">Idea name</th>
           <th class="th tablespace">Platform</th>
           <th class="th tablespace">Help Needed</th>
+           <th class="th tablespace">Created At</th>
+        
           
           <th colspan="3"></th>
         </tr>
@@ -47,6 +53,8 @@
             <td class="td tablespace"><%= idea.idea_name %></td>
             <td class="td tablespace"><%= idea.platform.platform_name %></td>
             <td class="td tablespace"><%= idea.role.skill_name %></td>
+            <td class="td tablespace"><%= idea.created_at %></td>
+
            
             
       

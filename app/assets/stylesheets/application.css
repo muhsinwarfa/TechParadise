@@ -125,10 +125,11 @@ body{
 /***********************INDEX************************/
 
 .index{
-	height: 600px;
+	height: 1200px;
 	margin: 0 auto;
 	background-color: #f2f7ff;
 	width: 100%;
+	margin-bottom: 50px;
 	
 }
 .indexheading{
@@ -190,6 +191,8 @@ body{
 	margin-left: 300px;
 	margin-top: 50px;
 	padding: 10px 20px 10px 20px;
+	width: 1020px;
+	height: 370px;
 
 
 
