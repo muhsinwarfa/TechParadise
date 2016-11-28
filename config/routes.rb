@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   get 'users/new' => 'users#new', as: :signup
   get 'newest_first' => 'ideas#newest_first', as: :ideas_newest_first
   get 'oldest_first' => 'ideas#oldest_first', as: :ideas_oldest_first
+  get 'names_descending' => 'ideas#names_descending' , as: :ideas_names_descending
+  get 'names_ascending' => 'ideas#names_ascending' , as: :ideas_names_ascending
+  get 'only_platform' => 'ideas#only_platform', as: :ideas_only_platform
+  get 'help_needed' => 'ideas#help_needed', as: :ideas_help_needed
 
 
  

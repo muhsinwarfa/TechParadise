@@ -1,5 +1,5 @@
 class IdeasController < ApplicationController
-  skip_before_action :authenticate, only: [:newest_first, :oldest_first]
+  skip_before_action :authenticate, only: [:newest_first, :oldest_first, :names_descending, :names_ascending,:only_platform, :help_needed]
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
   
   #has_scope :newest_first, -> { order("created_at DESC")}
@@ -19,6 +19,24 @@ class IdeasController < ApplicationController
    def oldest_first
       @ideas= Idea.oldest_first
    end
+
+   def names_descending
+      @ideas = Idea.names_descending
+   end
+
+   def names_ascending
+      @ideas = Idea.names_ascending
+   end
+
+   def only_platform
+     @ideas = Idea.joins(:platform).select(:idea_name,:platform_name,:id)
+   end
+
+
+  def help_needed
+     @ideas = Idea.joins(:role).select(:idea_name,:skill_name,:id)
+   end
+
 
   # GET /ideas/1
   # GET /ideas/1.json
