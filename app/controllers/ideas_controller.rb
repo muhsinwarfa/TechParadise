@@ -1,19 +1,25 @@
 class IdeasController < ApplicationController
+  skip_before_action :authenticate, only: [:newest_first, :oldest_first]
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate, only: [:newest_first]
-  has_scope :newest_first, -> { order("created_at DESC")}
+  
+  #has_scope :newest_first, -> { order("created_at DESC")}
 
 
   # GET /ideas
   # GET /ideas.json
   def index
-    @ideas = apply_scopes(Idea).all
+    @ideas = Idea.all
   end
 
 
-  # def newest_first
-  #   @ideas = Idea.newest_first
-  # end
+   def newest_first
+     @ideas = Idea.newest_first
+   end
+
+   def oldest_first
+      @ideas= Idea.oldest_first
+   end
+
   # GET /ideas/1
   # GET /ideas/1.json
   def show

@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get 'sessions/new' => 'sessions#new', as: :login
   delete 'sessions/:id' => 'sessions#destoy', as: :logout
   get 'users/new' => 'users#new', as: :signup
- 
+  get 'newest_first' => 'ideas#newest_first', as: :ideas_newest_first
+  get 'oldest_first' => 'ideas#oldest_first', as: :ideas_oldest_first
 
 
  
