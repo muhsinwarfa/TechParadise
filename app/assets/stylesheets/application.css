@@ -319,6 +319,7 @@ h4{
     border: none;
     cursor: pointer;
     margin-left: 25px;
+    border-radius: 5px;
 }
 
 
@@ -349,5 +350,5 @@ h4{
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #6e91c9;
 }
