@@ -10,7 +10,7 @@
 	</div>
 	<div class="headernavs">
 		<% if logged_in? %>
-			<%= link_to 'Logout', logout_path, method: :delete%>
+			<%= link_to 'Logout', logout_path, method::delete %>
 		<% else %>
 			<%=link_to("Log In", login_path , class: "headerlinks")%>
 			<%=link_to("Sign Up", signup_path,class: "headerlinks loginbutton")%>

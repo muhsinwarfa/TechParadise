@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_action :authenticate
 	 before_action :session_params, only: [:create]
 
   def new
@@ -6,6 +7,7 @@ class SessionsController < ApplicationController
 
   def create
   	user = User.find_by(email: params[:sessions][:email].downcase)
+  	
   	if user && user.password == params[:sessions][:password]
   		log_in user
   		flash[:notice] = 'Logged in'

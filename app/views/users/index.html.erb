@@ -14,14 +14,23 @@
   </thead>
 
   <tbody>
+
     <% @users.each do |user| %>
-      <tr>
-        <td class="td tablespace"><%= user.name %></td>
-        <td><%= link_to 'Show', user,class: "idealink tablespace" %></td>
-        <td ><%= link_to 'Edit', edit_user_path(user),class: "idealink tablespace" %></td>
-        <td><%= link_to 'Destroy', user,class: "idealink tablespace" ,method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <tr>
+      <td class="td tablespace"><%= user.email %></td>
+      <td class="td tablespace"><%= user.password %></td>
+      <td class="td tablespace"><%= user.role.skill_name %></td>
+      <td class="td tablespace"><%= user.admin %></td>
+      <td><%= link_to 'Toggle Admin', make_admin_user_path(user),class: "idealink tablespace" %></td>
+      <td><%= link_to 'Show', user ,class: "idealink tablespace" %></td>
+      <td><%= link_to 'Edit', edit_user_path(user),class: "idealink tablespace" %></td>
+      <td><%= link_to 'Destroy', user,class: "idealink tablespace", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %> 
+    
+    
+    
+    
   </tbody>
 </table>
 

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :users do
+    get :make_admin, on: :member
+  end 
   resources :platforms
   resources :roles
   resources :ideas
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
 
   root 'ideas#index' 
   get 'sessions/new' => 'sessions#new', as: :login
+  post 'sessions/new' => 'sessions#create'
   delete 'sessions/:id' => 'sessions#destoy', as: :logout
   get 'users/new' => 'users#new', as: :signup
   get 'newest_first' => 'ideas#newest_first', as: :ideas_newest_first

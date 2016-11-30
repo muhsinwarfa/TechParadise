@@ -83,13 +83,13 @@ body{
 	
 	height: 100%;
 	
-	width: 40%;
+	width: 31%;
 	display: inline-block;
 	text-align: center;
 	padding-top: 30px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-left: 70px;
+	margin-left: 248px;
 	font-family: "Roboto";
 
 }
@@ -101,7 +101,7 @@ body{
 	display: inline-block;
 	float: right;
 	text-align: center;
-	margin-right: 100px;
+	margin-right: 180px;
 	padding-top: 30px;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -192,7 +192,7 @@ body{
 	border-color: #3db1ff;
 	border-size: 5px; 
 	width: 40%;
-	margin-left: 300px;
+	margin-left: 270px;
 	margin-top: 50px;
 	padding: 10px 20px 10px 20px;
 	width: 1020px;
@@ -268,15 +268,16 @@ body{
  	font-size: 20px;
  	padding: 40px 50px 50px 10px;
  	background-color: #f2f7ff;
+ 	padding-left: 125px;
  	
 }
 
-.footerimage{
-	position: cover;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-}
+/*.footerimage{*/
+/*	position: cover;*/
+/*	position: fixed;*/
+/*	width: 100%;*/
+/*	height: 100%;*/
+/*}*/
 h4{
 	margin-left: 125px;
 }

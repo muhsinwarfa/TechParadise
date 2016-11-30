@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
+  skip_before_action :authenticate, only: [:new , :create ]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :admin_only, only: [:index, :make_admin]
+  
 
   # GET /users
   # GET /users.json
@@ -60,6 +63,15 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def make_admin
+    @user.toggle!(:admin)
+    if @user.save
+      redirect_to users_path, notice: 'User was successfully updated.'
+    else
+        flash[:alert]= 'Error updating user'
+        redirect_to users_path
+    end
+  end 
 
   #index method to order users
   def index
@@ -75,5 +87,14 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :password, :status)
+    end
+    
+    def set_user
+      @user = User.find(params[:id])
+      if @user == current_user || current_user.admin?
+        return @user
+      else
+          redirect_to root_path
+      end
     end
 end
