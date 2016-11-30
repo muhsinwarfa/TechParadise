@@ -7,6 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 r = Role.create(skill_name: "Web developer")
 Role.create(skill_name: "Job Seeker")
-Platform.create([{platform_name: "IOs"}, {name: "iPhone App"}, {name: "Web App"}])
+Platform.create([{platform_name: "IOs"}, {platform_name: "iPhone App"}, {platform_name: "Web App"}])
 User.create(email: "tartan@cmu.edu", password: "foobar", admin: true, role_id: r.id) 
  
