@@ -1,5 +1,5 @@
 class RolesController < ApplicationController
-  skip_before_action :authenticate , [:index ]
+  skip_before_action :authenticate , only: [:index, :open ]
   before_action :set_role, only: [:show, :edit, :update, :destroy]
   before_action :admin_only 
 
@@ -8,6 +8,10 @@ class RolesController < ApplicationController
   def index
     @roles = Role.all
   end
+  
+  # def open
+  #   @roles = role.open
+  # end
 
   # GET /roles/1
   # GET /roles/1.json
@@ -71,7 +75,7 @@ class RolesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def role_params
-      params.require(:role).permit(:skill_name)
+      params.require(:role).permit(:skill_name, :filled)
     end
     def admin_only
      if !current_user.admin?

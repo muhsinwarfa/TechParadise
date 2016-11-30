@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get 'names_ascending' => 'ideas#names_ascending' , as: :ideas_names_ascending
   get 'only_platform' => 'ideas#only_platform', as: :ideas_only_platform
   get 'help_needed' => 'ideas#help_needed', as: :ideas_help_needed
+  
+  
 
 
  

@@ -79,14 +79,11 @@ class UsersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
+    # Use callbacks to share common setup or constraints between actions
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :password, :status)
+      params.require(:user).permit(:name, :email, :password, :admin)
     end
     
     def set_user
@@ -96,5 +93,11 @@ class UsersController < ApplicationController
       else
           redirect_to root_path
       end
+    end
+    
+    def admin_only
+     if !current_user.admin?
+        redirect_to root_path
+     end
     end
 end

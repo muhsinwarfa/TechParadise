@@ -2,6 +2,9 @@
 
 
 <%= form_for(:sessions, url: sessions_path) do |f| %>
+ <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: "alert alert-danger"%>
+  <%end%>
 
   <div class="field tablespace">
     <%= f.label :email %><br>
@@ -14,7 +17,9 @@
   
   <div class="actions tablespace">
     <%= f.submit "Login" %>
+    
   </div>
+ 
 <% end %>
 
 </div>
