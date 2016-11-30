@@ -1,7 +1,7 @@
 <div class="idealist" >
 
 
-<%= form_for(:sessions) do |f| %>
+<%= form_for(:sessions, url: sessions_path) do |f| %>
 
   <div class="field tablespace">
     <%= f.label :email %><br>

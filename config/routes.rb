@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   resources :sessions , only: [:new , :create , :destroy]
 
   root 'ideas#index' 
+  # get 'sessions/new' => 'sessions#new', as: :login
+  # post 'sessions/new' => 'sessions#create'
+  # delete 'sessions/:id' => 'sessions#destroy', as: :logout
   get 'sessions/new' => 'sessions#new', as: :login
-  post 'sessions/new' => 'sessions#create'
-  delete 'sessions/:id' => 'sessions#destoy', as: :logout
+  get 'sessions/destroy' => 'sessions#destroy', as: :logout
   get 'users/new' => 'users#new', as: :signup
   get 'newest_first' => 'ideas#newest_first', as: :ideas_newest_first
   get 'oldest_first' => 'ideas#oldest_first', as: :ideas_oldest_first
