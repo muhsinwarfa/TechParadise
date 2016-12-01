@@ -108,5 +108,4 @@ class IdeasController < ApplicationController
     
     
     
-    
 end

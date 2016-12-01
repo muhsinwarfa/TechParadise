@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User..all
+    @users = User.all
   end
   
     
@@ -70,16 +70,17 @@ class UsersController < ApplicationController
   def index
     @users = User.order(:name)
   end
-  
-  def make_admin
-    @user.toggle!(:admin)
-    if @user.save
+   def make_admin
+      @user.toggle!(:admin) 
+      if @user.save
         redirect_to users_path, notice: 'User was successfully updated.'
-    else
+      else
         flash[:alert]= 'Error updating user'
         redirect_to users_path
-    end
+      end
   end 
+  
+  
 
   private
     # Use callbacks to share common setup or constraints between actions
@@ -97,6 +98,9 @@ class UsersController < ApplicationController
           redirect_to root_path
       end
     end
+    
+    
+   
     
     def admin_only
      if !current_user.admin?

@@ -8,9 +8,7 @@ Rails.application.routes.draw do
   resources :sessions , only: [:new , :create , :destroy]
 
   root 'ideas#index' 
-  # get 'sessions/new' => 'sessions#new', as: :login
-  # post 'sessions/new' => 'sessions#create'
-  # delete 'sessions/:id' => 'sessions#destroy', as: :logout
+ 
   get 'sessions/new' => 'sessions#new', as: :login
   get 'sessions/destroy' => 'sessions#destroy', as: :logout
   get 'users/new' => 'users#new', as: :signup

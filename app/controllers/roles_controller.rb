@@ -1,7 +1,7 @@
 class RolesController < ApplicationController
-  skip_before_action :authenticate , only: [ :open ]
+  skip_before_action :authenticate
   before_action :set_role, only: [:show, :edit, :update, :destroy]
-  before_action :admin_only 
+  # before_action :admin_only 
 
   # GET /roles
   # GET /roles.json
