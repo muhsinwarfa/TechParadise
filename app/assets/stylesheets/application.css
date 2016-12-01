@@ -358,11 +358,20 @@ h4{
     background-color: #6e91c9;
 }
 /**********visitors********/
-#visitorsheading{
-	color: white;
+#visitorsdiv{
+	
 	position: absolute;
 	z-index: 2;
+	height: 200px;
+	width: 600px;
+	background-color: blue;
+	margin-top: 200px;
+	margin-left: 500px;
+	color: white;
+	font-family: "Roboto"
+
 }
+
 .bluebackground{
 	position: absolute;
 	z-index: 1;
