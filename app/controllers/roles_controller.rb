@@ -1,5 +1,5 @@
 class RolesController < ApplicationController
-  skip_before_action :authenticate , only: [:index, :open ]
+  skip_before_action :authenticate , only: [ :open ]
   before_action :set_role, only: [:show, :edit, :update, :destroy]
   before_action :admin_only 
 
@@ -78,7 +78,7 @@ class RolesController < ApplicationController
       params.require(:role).permit(:skill_name, :filled)
     end
     def admin_only
-     if !current_user.admin?
+     if (current_user && !current_user.admin?)
         redirect_to root_path
      end
     end
