@@ -90,7 +90,9 @@ body{
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-left: 248px;
-	font-family: "Roboto";
+    font-family: 'Roboto', sans-serif;
+
+
 
 }
 
@@ -105,7 +107,9 @@ body{
 	padding-top: 30px;
 	padding-left: 10px;
 	padding-right: 10px;
-	font-family: "Roboto";
+	font-family: 'Roboto', sans-serif;
+	
+
 
 	
 }
@@ -240,10 +244,16 @@ body{
 #aboutp{
 
 	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.5em;
+	letter-spacing: 1px;
 }
 
 #helpp{
 	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.5em;
+	letter-spacing: 1px;
 }
 
 
@@ -269,6 +279,8 @@ body{
  	padding: 40px 50px 50px 10px;
  	background-color: #f2f7ff;
  	padding-left: 125px;
+ 	font-family: 'Roboto', sans-serif;
+
  	
 }
 
@@ -371,6 +383,14 @@ h4{
 
 
 }
+#visitorsp{
+		font-family: 'Roboto', sans-serif;
+		font-size: 20px;
+		letter-spacing: 1px;
+		line-height: 1.5em;
+		margin-left: 20px;
+
+}
 
 .bluebackground{
 	position: absolute;
@@ -382,3 +402,6 @@ h4{
 	width:100%;
 	
 }
+
+
+
