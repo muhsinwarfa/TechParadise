@@ -6,12 +6,13 @@ class ApplicationController < ActionController::Base
   before_action :authenticate
   private        
   def authenticate      
-    return if controller_name == "ideas"
+    return if controller_name == "r"
     if !logged_in?
       flash[:alert] = "Must be logged in!"
-      redirect_to root_path
+      redirect_to login_path
     end 
   end 
+  
  
 
 end

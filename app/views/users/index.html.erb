@@ -7,6 +7,10 @@
   <thead>
     <tr>
       <th  class="th tablespace">Name</th>
+      <th  class="th tablespace">Email</th>
+      <th  class="th tablespace">Admin</th>
+
+
       
       
       <th colspan="3"></th>
@@ -17,9 +21,8 @@
 
     <% @users.each do |user| %>
     <tr>
+      <td class="td tablespace"><%= user.name %></td>
       <td class="td tablespace"><%= user.email %></td>
-      <td class="td tablespace"><%= user.password %></td>
-      <td class="td tablespace"><%= user.roles.name %></td>
       <td class="td tablespace"><%= user.admin %></td>
       <td><%= link_to 'Toggle Admin', make_admin_user_path(user),class: "idealink tablespace" %></td>
       <td><%= link_to 'Show', user ,class: "idealink tablespace" %></td>

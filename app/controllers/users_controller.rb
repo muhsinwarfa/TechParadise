@@ -65,20 +65,21 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+ 
+  #index method to order users
+  def index
+    @users = User.order(:name)
+  end
+  
   def make_admin
     @user.toggle!(:admin)
     if @user.save
-      redirect_to users_path, notice: 'User was successfully updated.'
+        redirect_to users_path, notice: 'User was successfully updated.'
     else
         flash[:alert]= 'Error updating user'
         redirect_to users_path
     end
   end 
-
-  #index method to order users
-  def index
-    @users = User.order(:name)
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions
@@ -102,4 +103,7 @@ class UsersController < ApplicationController
         redirect_to root_path
      end
     end
+    
+    
+
 end
