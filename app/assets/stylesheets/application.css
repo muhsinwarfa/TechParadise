@@ -362,13 +362,13 @@ h4{
 	
 	position: absolute;
 	z-index: 2;
-	height: 200px;
+	height: 500px;
 	width: 600px;
-	background-color: blue;
-	margin-top: 200px;
-	margin-left: 500px;
+	margin-top: 120px;
+	margin-left: 450px;
 	color: white;
-	font-family: "Roboto"
+	font-family: 'Roboto', sans-serif;
+
 
 }
 
@@ -377,4 +377,8 @@ h4{
 	z-index: 1;
 	height: 690px;
 	width: 100%;
+}
+.techlogo{
+	width:100%;
+	
 }
