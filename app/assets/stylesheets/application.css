@@ -29,7 +29,7 @@ body{
 	font-family: "Roboto";
 	background-color: black;
 	padding-top: 25px;
-	height: 50px;
+	height: 64px;
 }
 .loginbutton{
 	
@@ -356,4 +356,16 @@ h4{
 
 .dropdown:hover .dropbtn {
     background-color: #6e91c9;
+}
+/**********visitors********/
+#visitorsheading{
+	color: white;
+	position: absolute;
+	z-index: 2;
+}
+.bluebackground{
+	position: absolute;
+	z-index: 1;
+	height: 690px;
+	width: 100%;
 }

@@ -9,10 +9,6 @@ class IdeasController < ApplicationController
     @ideas = Idea.all
   end
   
-  def visitors
-    @ideas = Idea.all
-  end 
-  
 
 
    def newest_first
