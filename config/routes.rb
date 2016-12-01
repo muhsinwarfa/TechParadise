@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   get 'help_needed' => 'ideas#help_needed', as: :ideas_help_needed
   
   
+  
+  
 
 
  

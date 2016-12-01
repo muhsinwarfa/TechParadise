@@ -11,6 +11,5 @@ class Idea < ActiveRecord::Base
  	scope :names_descending, -> {order("idea_name DESC")}
  	scope :names_ascending, -> {order("idea_name ASC")}
  	scope :only_platform, ->  {joins(:platform).pluck(":idea_name, :platform_name")}
- #    has_scope :only_help_needed, -> {joins(:platform, :role).pluck(":idea_name ,:skill_name")}
 
 end
