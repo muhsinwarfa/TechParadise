@@ -1,7 +1,8 @@
 class RolesController < ApplicationController
-  before_action :authenticate
-  before_action :set_role, only: [:show, :edit, :update, :destroy]
-  before_action :admin_only
+  before_action :set_role, only: [:show, :edit, :update, :destroy, :apply]
+  # before_action :admin_only, only: [:apply]
+  skip_before_action :authenticate , only: [:apply]
+
 
   # GET /roles
   # GET /roles.json
@@ -10,15 +11,13 @@ class RolesController < ApplicationController
   end
   
   def apply
-      @role = Role.find(params[:id])
-      @role.filled = "true"
+      @role.toggle!(:filled)
       if @role.save
-         redirect_to ideas_path, notice: 'Role was successfully updated.' 
+         redirect_to idea_path, notice: 'Role was successfully updated.' 
       else
-         flash[:alert]= 'please login first'
-         redirect_to login_path
+         flash[:alert]= 'Error Updating role'
+         redirect_to idea_path
       end
-   
   end
   
   # def open

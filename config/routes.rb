@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get 'only_platform' => 'ideas#only_platform', as: :ideas_only_platform
   get 'help_needed' => 'ideas#help_needed', as: :ideas_help_needed
   get 'visitors' => 'visitors#new'
-  
+  # get 'apply' => 'roles#apply' , as: :apply
   
   
   

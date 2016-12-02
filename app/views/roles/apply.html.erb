@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+
 <div class=" showforeveryview">
   <p>
     <strong>Idea name:</strong>
@@ -29,10 +30,12 @@
   <p>
     <strong>User:</strong>
     
-    <% if @idea.try(:user).nil?%>
-          <%= "Still Open"%>
+    <% if @idea.role.filled%>
+          <%= @idea.try(:user).try(:name)%>
+           <%= "T"%>
     <%else%>
-         <%= @idea.try(:user).try(:name)%>
+           <%= "Still Open"%>
+  
     <%end%>
   </p>
   <%= link_to 'Edit', edit_idea_path(@idea), class: "idealink"%> |
@@ -46,19 +49,17 @@
     <strong>Role:</strong>
     <%= @idea.role.skill_name%> <span>-</span> 
     <!--checks if the role is still open-->
-    <% if @idea.try(:user).nil?%>
-          <%= "Still Open"%>
+    <% if @idea.role.filled %>
+          <%= @idea.try(:user).try(:name)%>
+           <%= "TRYYYY"%>
     <%else%>
-         <%= @idea.try(:user).try(:name)%>
+     
+      <%= "Still Open"%>
     <%end%>
+  
+  
   </p>
-  
-       <% if @idea.try(:user).nil?%>
-           <%= link_to 'Apply', apply_role_path %>
-      <%else%>
-      <%end%>
 
-  
     
     
   </div>
