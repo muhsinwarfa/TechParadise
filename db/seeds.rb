@@ -8,5 +8,5 @@
 r = Role.create(skill_name: "Web developer")
 Role.create(skill_name: "Job Seeker")
 Platform.create([{platform_name: "IOs"}, {platform_name: "iPhone App"}, {platform_name: "Web App"}])
-User.create(email: "tartan@cmu.edu", password: "foobar", admin: true, role_id: r.id) 
+User.create(name: "tartan" ,email: "tartan@cmu.edu", password: "foobar", admin: true) 
  

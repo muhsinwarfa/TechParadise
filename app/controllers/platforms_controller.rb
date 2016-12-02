@@ -78,7 +78,7 @@ class PlatformsController < ApplicationController
     
    
    def admin_only
-    if !current_user.admin?
+    if (current_user && !current_user.admin?)
       redirect_to root_path
     end
    end

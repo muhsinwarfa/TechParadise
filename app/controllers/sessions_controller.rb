@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_action :authenticate
+  
 	 before_action :session_params, only: [:create]
 
   def new
