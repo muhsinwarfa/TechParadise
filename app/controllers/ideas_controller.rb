@@ -35,7 +35,12 @@ class IdeasController < ApplicationController
   def help_needed
      @ideas = Idea.joins(:role).select(:idea_name,:skill_name,:id)
   end
+  
+  
+    
+    
 
+  
 
   # GET /ideas/1
   # GET /ideas/1.json
@@ -102,7 +107,7 @@ class IdeasController < ApplicationController
       params.require(:idea).permit(:idea_name , :idea_description , :additional_info , :platform_id, :role_id , :user_id)
     end
     
-   
+    
     
     
     

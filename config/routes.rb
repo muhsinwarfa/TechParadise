@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   resources :users do
-    get :make_admin, on: :member
+     get :make_admin, on: :member
   end 
   resources :platforms
-  resources :roles
+  resources :roles do
+     get :apply, on: :member
+  end
   resources :ideas
+
   resources :sessions , only: [:new , :create , :destroy]
 
   # root 'ideas#index' 

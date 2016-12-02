@@ -1,12 +1,24 @@
 class RolesController < ApplicationController
   before_action :authenticate
   before_action :set_role, only: [:show, :edit, :update, :destroy]
-  # before_action :admin_only
+  before_action :admin_only
 
   # GET /roles
   # GET /roles.json
   def index
     @roles = Role.all
+  end
+  
+  def apply
+      @role = Role.find(params[:id])
+      @role.filled = "true"
+      if @role.save
+         redirect_to ideas_path, notice: 'Role was successfully updated.' 
+      else
+         flash[:alert]= 'please login first'
+         redirect_to login_path
+      end
+   
   end
   
   # def open
@@ -71,6 +83,7 @@ class RolesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_role
       @role = Role.find(params[:id])
+      
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

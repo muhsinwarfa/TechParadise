@@ -29,10 +29,11 @@
   <p>
     <strong>User:</strong>
     
-    <% if @idea.user.nil?%>
-      <%= "Still Open"%>
+    <% if @idea.role.filled%>
+          <%= @idea.try(:user).try(:name)%>
     <%else%>
-      <%= @idea.try(:user).try(:name)%>
+           <%= "Still Open"%>
+  
     <%end%>
   </p>
   <%= link_to 'Edit', edit_idea_path(@idea), class: "idealink"%> |
@@ -40,18 +41,26 @@
   <br>
   <br>
   <div> 
-  <h1>RListing Role/User pair </h1>
+  <h1>Listing Role/User pair </h1>
   
    <p>
     <strong>Role:</strong>
     <%= @idea.role.skill_name%> <span>-</span> 
-    <% if @idea.user.nil?%>
-      <%= "Still Open"%>
+    <!--checks if the role is still open-->
+    <% if @idea.role.filled%>
+          <%= @idea.try(:user).try(:name)%>
     <%else%>
-      <%= @idea.try(:user).try(:name)%>
+     
+      <%= "Still Open"%>
     <%end%>
   
+  
+  <!--checks whether a user has logged in first then checks if the role is still open-->
   </p>
+  <%= link_to 'Apply', apply_role_path %>
+  
+    
+    
   </div>
 
   

@@ -78,7 +78,7 @@ class UsersController < ApplicationController
         flash[:alert]= 'Error updating user'
         redirect_to users_path
       end
-  end 
+   end 
   
   
 
