@@ -422,5 +422,14 @@ h4{
 	background-color: white;
 }
 
+.applybutton{
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+	padding: 5px 10px 5px 10px;
+	margin-top: 20px;
+	text-decoration: none;
+}
 
 

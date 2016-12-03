@@ -1,6 +1,6 @@
 class RolesController < ApplicationController
   before_action :set_role, only: [:show, :edit, :update, :destroy, :apply]
-  before_action :admin_only
+  before_action :admin_only, only: [ :apply ]
 
 
   # GET /roles
