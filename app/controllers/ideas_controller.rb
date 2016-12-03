@@ -1,8 +1,7 @@
 class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate, only: [:index,:show,:newest_first, :oldest_first, :names_descending, :names_ascending,:only_platform, :help_needed]
-
-
+  
   # GET /ideas
   # GET /ideas.json
   def index
