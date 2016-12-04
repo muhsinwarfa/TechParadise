@@ -5,6 +5,7 @@ class UserTest < ActiveSupport::TestCase
   setup do
     @user = users(:Muhsin)
     @user.password = @user.password_confirmation = "muhsinwarfa"
+    @user.admin = false
   end
 
   test "should be valid" do

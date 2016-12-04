@@ -9,15 +9,7 @@ class RolesController < ApplicationController
     @roles = Role.all
   end
   
-  def apply
-      @role.toggle!(:filled)
-      if @role.save
-         redirect_to idea_path, notice: 'Role was successfully updated.' 
-      else
-         flash[:alert]= 'Error Updating role'
-         redirect_to idea_path
-      end
-  end
+
   
   # def open
   #   @roles = role.open
@@ -92,5 +84,16 @@ class RolesController < ApplicationController
      if (current_user && !current_user.admin?)
         redirect_to root_path
      end
+    end
+    
+    
+    def apply
+      @role.toggle!(:filled)
+      if @role.save
+         redirect_to idea_path, notice: 'Role was successfully updated.' 
+      else
+         flash[:alert]= 'Error Updating role'
+         redirect_to idea_path
+      end
     end
 end

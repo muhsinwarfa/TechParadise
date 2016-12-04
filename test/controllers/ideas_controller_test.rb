@@ -2,7 +2,13 @@ require 'test_helper'
 
 class IdeasControllerTest < ActionController::TestCase
   setup do
-    @idea = ideas(:one)
+      @idea = ideas(:Instagram)
+    	@idea.idea_name = "Instagram"
+    	@idea.idea_description = "A Web app that edit and share photos with friends and family"
+    	@idea.additional_info = "Looking for a Web Developer who can develop with our company"
+    	@idea.platform_id = 1
+    	@idea.role_id = 1
+    	@idea.user_id = 1
   end
 
   test "should get index" do

@@ -2,7 +2,9 @@ require 'test_helper'
 
 class RolesControllerTest < ActionController::TestCase
   setup do
-    @role = roles(:one)
+    @role = roles(:Webdeveloper)
+    @role.skill_name = "Web Developer"
+    @role.filled = false
   end
 
   test "should get index" do
@@ -18,7 +20,7 @@ class RolesControllerTest < ActionController::TestCase
 
   test "should create role" do
     assert_difference('Role.count') do
-      post :create, role: { skills_overview: @role.skills_overview }
+      post :create, role: { skill_name: @role.skill_name }
     end
 
     assert_redirected_to role_path(assigns(:role))
@@ -35,7 +37,7 @@ class RolesControllerTest < ActionController::TestCase
   end
 
   test "should update role" do
-    patch :update, id: @role, role: { skills_overview: @role.skills_overview }
+    patch :update, id: @role, role: { skill_name: @role.skill_name }
     assert_redirected_to role_path(assigns(:role))
   end
 

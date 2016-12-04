@@ -2,6 +2,8 @@
 
 Webdeveloper:
   skill_name: Webdeveloper
+  filled: false
 
 Androiddeveloper:
   skill_name: Androiddeveloper
+  filled: false

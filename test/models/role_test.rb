@@ -3,6 +3,7 @@ require 'test_helper'
 class RoleTest < ActiveSupport::TestCase
 	setup do
     	@role = roles(:Webdeveloper)
+    	@role.filled = false
   	end
 
 

@@ -55,6 +55,7 @@
   
        <% if @idea.try(:user).nil?%>
            <%= link_to 'Apply for the job', apply_role_path, class: "applybutton" %>
+           
       <%else%>
       <%end%>
 

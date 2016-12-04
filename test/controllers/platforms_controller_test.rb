@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PlatformsControllerTest < ActionController::TestCase
   setup do
-    @platform = platforms(:one)
+    @platform = platforms(:WebApp)
   end
 
   test "should get index" do
