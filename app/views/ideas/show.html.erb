@@ -33,6 +33,7 @@
           <%= "Still Open"%>
     <%else%>
          <%= @idea.try(:user).try(:name)%>
+         
     <%end%>
   </p>
   <%= link_to 'Edit', edit_idea_path(@idea), class: "idealink"%> |
@@ -46,17 +47,22 @@
     <strong>Role:</strong>
     <%= @idea.role.skill_name%> <span>-</span> 
     <!--checks if the role is still open-->
-    <% if @idea.try(:user).nil?%>
+
+   <% if @idea.try(:user).nil? %>
           <%= "Still Open"%>
     <%else%>
          <%= @idea.try(:user).try(:name)%>
     <%end%>
   </p>
-  
+
        <% if @idea.try(:user).nil?%>
-           <%= link_to 'Apply for the job', apply_role_path, class: "applybutton" %>
-           
+      
+           <%= link_to 'Apply for the job', apply_idea_path, class: "applybutton" %>
+
+
       <%else%>
+
+          
       <%end%>
 
   

@@ -3,10 +3,10 @@ Rails.application.routes.draw do
      get :make_admin, on: :member
   end 
   resources :platforms
-  resources :roles do
+  resources :roles
+  resources :ideas do 
      get :apply, on: :member
   end
-  resources :ideas
 
   resources :sessions , only: [:new , :create , :destroy]
 
@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get 'only_platform' => 'ideas#only_platform', as: :ideas_only_platform
   get 'help_needed' => 'ideas#help_needed', as: :ideas_help_needed
   get 'visitors' => 'visitors#new'
-  # get 'apply' => 'roles#apply' , as: :apply
+  # get 'roles/:id/apply' => 'roles#apply' , as: :apply
   
   
   

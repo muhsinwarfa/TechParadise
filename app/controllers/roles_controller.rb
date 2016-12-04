@@ -1,6 +1,7 @@
 class RolesController < ApplicationController
-  before_action :set_role, only: [:show, :edit, :update, :destroy, :apply]
+  before_action :set_role, only: [:show, :edit, :update, :destroy]
   before_action :admin_only
+  skip_before_action :admin_only
 
 
   # GET /roles
@@ -9,6 +10,7 @@ class RolesController < ApplicationController
     @roles = Role.all
   end
   
+   
 
   
   # def open
@@ -87,13 +89,5 @@ class RolesController < ApplicationController
     end
     
     
-    def apply
-      @role.toggle!(:filled)
-      if @role.save
-         redirect_to idea_path, notice: 'Role was successfully updated.' 
-      else
-         flash[:alert]= 'Error Updating role'
-         redirect_to idea_path
-      end
-    end
+   
 end

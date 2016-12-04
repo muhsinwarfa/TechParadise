@@ -1,5 +1,5 @@
 class IdeasController < ApplicationController
-  before_action :set_idea, only: [:show, :edit, :update, :destroy]
+  before_action :set_idea, only: [:show, :edit, :update, :destroy,:apply]
   skip_before_action :authenticate, only: [:index,:show,:newest_first, :oldest_first, :names_descending, :names_ascending,:only_platform, :help_needed]
   
   # GET /ideas
@@ -8,6 +8,16 @@ class IdeasController < ApplicationController
     @ideas = Idea.all
   end
   
+  def apply
+      @idea.role.toggle(:filled)
+      @idea.update(:user_id => current_user.id)
+      if @idea.save
+         redirect_to idea_path, notice: 'Role was successfully updated.' 
+      else
+         flash[:alert]= 'Error Updating role'
+         redirect_to idea_path
+      end
+  end
 
 
    def newest_first
@@ -53,6 +63,7 @@ class IdeasController < ApplicationController
 
   # GET /ideas/1/edit
   def edit
+    
   end
 
   # POST /ideas
