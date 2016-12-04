@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UsersControllerTest < ActionController::TestCase
   setup do
-    @user = users(:Abdi)
+    @user = users(:tartan)
     @user.email = "tartan@cmu.edu"
     @user.name = "tartan"
     @user.password = "foobar"
